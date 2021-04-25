@@ -5,15 +5,19 @@
 //  Created by 松橋拓哉 on 2021/04/25.
 //
 
-import UIKit
 
-@main
+import UIKit
+import Firebase
+
+@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    // SVProgressHUDをXcode11で実行するための環境調整コード
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        FirebaseApp.configure()
         return true
     }
 
